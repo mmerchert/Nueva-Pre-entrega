@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+¡Encuentra aquí todo lo que necesites para tu gato!
+{% endblock %}
+
+{% block formulario %}
+
+<form action="{% url 'VerGatos' %}" method="POST"> {% csrf_token %}
+
+    <p> Producto:  <input type="text" name="Producto" > </p>
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock  %}

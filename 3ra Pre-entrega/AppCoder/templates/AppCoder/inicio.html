@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+¡Bievenido a Léonidas Pet Shop!
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="/AppCoder/resultados/" method="GET">
+
+    <input type="number" name="numero" id="numero">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+<p>Estamos buscando la compra numero: {{numero}}</p>
+
+{% for compra in compras %}
+
+    <p>Nombre: {{compra.nombre}} ---- Numero: {{compra.numero}} </p>
+
+{% endfor %}
+
+{% endblock %}
